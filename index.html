@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Yatai's Rest</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<style>
+			.carousel {
+				position: relative;
+				width: 100%;
+				max-width: 700px;
+				margin: 2rem auto;
+				overflow: hidden;
+			}
+			.carousel-container {
+				display: flex;
+				transition: transform 0.5s ease-in-out;
+				width: 100%;
+			}
+			.carousel-slide {
+				display: flex;
+				width: 100%;
+			}
+			.carousel-slide img {
+				width: 100%;
+				height: 325px;
+				object-fit: cover;
+				border-radius: 15px;
+				flex-shrink: 0;
+			}
+			.carousel-btn {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				border: none;
+				cursor: pointer;
+				padding: 0.5rem 1rem;
+				z-index: 10;
+			}
+			.carousel-btn.prev {
+				left: 10px;
+			}
+			.carousel-btn.next {
+				right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container-hero">
+				<div class="container hero">
+					<div class="customer-support">
+						<i class="fa-solid fa-headset"></i>
+						<div class="content-customer-support">
+							<span class="text">Soporte al cliente</span>
+							<span class="number">Contactanos al 829-916-1791</span>
+						</div>
+					</div>
+
+					<div class="container-logo">
+						<i class="fa-solid fa-mug-hot"></i>
+						<h1 class="logo"><a href="/">Yatai's Rest</a></h1>
+					</div>
+
+					<div class="container-user">
+						<i class="fa-solid fa-user"></i>
+						<i class="fa-solid fa-basket-shopping"></i>
+						<div class="content-shopping-cart">
+							<span class="text">Carrito</span>
+							<span class="number">(0)</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-navbar">
+				<nav class="navbar container">
+					<i class="fa-solid fa-bars"></i>
+					<ul class="menu">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Dulces Artesanales</a></li>
+						<li><a href="#">Café Japones</a></li>
+						<li><a href="#">Blogs</a></li>
+						<li><a href="#">Conócenos</a></li>
+					</ul>
+
+					<form class="search-form">
+						<input type="search" placeholder="Buscar..." />
+						<button class="btn-search">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+				</nav>
+			</div>
+		</header>
+
+		<section class="banner">
+			<div class="content-banner">
+				<p>Vive la Experiencia en</p>
+				<h2>Yatai's Cafe & <br />Restaurant</h2>
+				<a href="#">¡Has tu pedido ahora en Pedidos Ya!</a>
+			</div>
+		</section>
+
+		<main class="main-content">
+			<section class="container container-features">
+				<div class="card-feature">
+					<i class="fa-solid fa-plane-up"></i>
+					<div class="feature-content">
+						<span>Envío gratuito en todo Santo Domingo</span>
+						<p>En pedidos superiores a $450</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-wallet"></i>
+					<div class="feature-content">
+						<span>Contrareembolso</span>
+						<p>80% garantía de devolución en caso problemas de envio ;D</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-gift"></i>
+					<div class="feature-content">
+						<span>Tarjetas de regalo especiales</span>
+						<p>¡Ofrecemos cupones de descuentos en postres frios!</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-headset"></i>
+					<div class="feature-content">
+						<span>Servicio al cliente 24/7</span>
+						<p>Escribenos o llama al 829-916-1791</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="carousel">
+				<div class="carousel-container">
+					<div class="carousel-slide">
+						<img src="img/carr1.jpeg" alt="Imagen 1">
+						<img src="img/carr2.jpeg" alt="Imagen 2">
+						<img src="img/carr3.jpeg" alt="Imagen 3">
+						<img src="img/carr4.jpeg" alt="Imagen 4">
+						<img src="img/carr5.jpeg" alt="Imagen 5">
+						<img src="img/carr6.jpeg" alt="Imagen 6">
+					</div>
+				</div>
+				<button class="carousel-btn prev">&#10094;</button>
+				<button class="carousel-btn next">&#10095;</button>
+			</section>
+
+			<section class="container top-categories">
+				<h1 class="heading-1">Mejores Categorías</h1>
+				<div class="container-categories">
+					<div class="card-category" style="background-image: url('img/cat1.jpg');">
+						<p>Cafés de Especialidad</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category" style="background-image: url('img/cat2.jpg');">
+						<p>Té Tradicional</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category" style="background-image: url('img/cat3.jpg');">
+						<p>Dulces Artesanales</p>
+						<span>Ver más</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="container top-products">
+				<h1 class="heading-1">Mejores Productos</h1>
+
+				<div class="container-options">
+					<span class="active">Destacados</span>
+					<span>Más recientes</span>
+					<span>Mejores Vendidos</span>
+				</div>
+
+				<div class="container-products">
+					<!-- Producto 1 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="img/Dorayakis.jpg" alt="Dorayakis" />
+							<span class="discount">-13%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Dorayakis</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$4.60 <span>$5.30</span></p>
+						</div>
+					</div>
+					<!-- Producto 2 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img
+								src="img/cafe-ingles.jpg"
+								alt="Cafe incafe-ingles.jpg"
+							/>
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Bobba Tea</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5.70 <span>$7.30</span></p>
+						</div>
+					</div>
+					<!--  -->
+					<div class="card-product">
+						<div class="container-img">
+							<img
+								src="img/cafe-australiano.jpg"
+								alt="Cafe Australiano"
+							/>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Taiyaki</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$3.20</p>
+						</div>
+					</div>
+					<!--  -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="img/cafe-helado.jpg" alt="Cafe Helado" />
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Coffe Jelly</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5.60</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="gallery">
+				<img
+					src="img/gallery1.jpg"
+					alt="Gallery Img1"
+					class="gallery-img-1"
+				/><img
+					src="img/gallery2.jpg"
+					alt="Gallery Img2"
+					class="gallery-img-2"
+				/><img
+					src="img/gallery3.jpg"
+					alt="Gallery Img3"
+					class="gallery-img-3"
+				/><img
+					src="img/ambiente1.jpg"
+					alt="Gallery Img4"
+					class="gallery-img-4"
+				/><img
+					src="img/ambiente2.jpg"
+					alt="Gallery Img5"
+					class="gallery-img-5"
+				/>
+			</section>
+
+			<section class="container specials">
+				<h1 class="heading-1">Especiales</h1>
+
+				<div class="container-products">
+					<!-- Producto 1 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="img/Dorayakis.jpg" alt="Dorayakis/>
+							<span class="discount">-13%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Dorayakis</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$4.60 <span>$5.30</span></p>
+						</div>
+					</div>
+					<!-- Producto 2 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img
+								src="img/cafe-ingles.jpg"
+								alt="Cafe incafe-ingles.jpg"
+							/>
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Bobba Tea</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5.70 <span>$7.30</span></p>
+						</div>
+					</div>
+					<!--  -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="img/cafe-viena.jpg" alt="Cafe Viena" />
+							<span class="discount">-30%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Mochis Rellenos</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$3.85 <span>$5.50</span></p>
+						</div>
+					</div>
+					<!--  -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="img/cafe-liqueurs.jpg" alt="Cafe Liqueurs" />
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Cafe Liqueurs</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5.60</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="container blogs">
+				<h1 class="heading-1">Últimos 3 blogs del café</h1>
+
+				<div class="container-blogs">
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="img/Restaurant.png" alt="Imagen Blog 1" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Inauguración de Yatai's Rest</h3>
+							<span>08 de enero de 2026</span>
+							<p>
+								Hoy abrimos oficialmente nuestras puertas.
+								Gracias por acompañarnos en este sueño con aroma a café y tradición japonesa.
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="img/blog-2.jpg" alt="Imagen Blog 2" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Qué es el matcha y por qué todos lo aman</h3>
+							<span>03 de enero de 2026</span>
+							<p>
+								Contamos el origen del matcha y cómo lo preparamos en Yatai's Rest.
+								Descubre por qué es la bebida más pedida del mes.
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="img/blog-3.jpg" alt="Imagen Blog 3" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>           
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Postres japoneses que debes probar</h3>
+							<span>27 de diciembre de 2025</span>
+							<p>
+								Desde mochi hasta dorayaki, mostramos nuestros dulces estrella.
+								Perfectos para acompañar tu café o matcha latte.
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>
+								Dirección: Agora Mall, Av. Abraham Lincoln esq. con Av. John F. Kennedy. Sto. Dgo. Distrito Nacional.
+							</li>
+							<li>Teléfono: 829-916-1791</li>
+							<li>Fax: 55555300</li>
+							<li>EmaiL: yataisrest@support.com</li>
+						</ul>
+						<div class="social-icons">
+							<span class="facebook">
+								<i class="fa-brands fa-facebook-f"></i>
+							</span>
+							<span class="twitter">
+								<i class="fa-brands fa-twitter"></i>
+							</span>
+							<span class="youtube">
+								<i class="fa-brands fa-youtube"></i>
+							</span>
+							<span class="pinterest">
+								<i class="fa-brands fa-pinterest-p"></i>
+							</span>
+							<span class="instagram">
+								<i class="fa-brands fa-instagram"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#">Información Delivery</a></li>
+							<li><a href="#">Politicas de Privacidad</a></li>
+							<li><a href="#">Términos y condiciones</a></li>
+							<li><a href="#">Contactános</a></li>
+						</ul>
+					</div>
+
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
+
+						<ul>
+							<li><a href="#">Mi cuenta</a></li>
+							<li><a href="#">Historial de ordenes</a></li>
+							<li><a href="#">Lista de deseos</a></li>
+							<li><a href="#">Boletín</a></li>
+							<li><a href="#">Reembolsos</a></li>
+						</ul>
+					</div>
+					<div class="newsletter">
+						<p class="title-footer">Boletín informativo</p>
+
+						<div class="content">
+							<p>
+								Suscríbete a nuestros boletines ahora y mantente al
+								día con nuevas colecciones y ofertas exclusivas.
+							</p>
+							<input type="email" placeholder="Ingresa el correo aquí...">
+							<button>Suscríbete</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="copyright">
+					<p>
+						Por Grupo II de 6toB Informatica &copy; 2026. Todos los derechos reservados.
+					</p>
+
+					<img src="img/payment.png" alt="Pagos">
+				</div>
+			</div>
+		</footer>
+		<div class="chatbot">
+			<div class="chat-header">Asistente del Café ☕</div>
+		
+			<div class="chat-body" id="chatBody">
+				<div class="bot-message">
+					Hola 👋 Bienvenido a nuestro café.  
+					¿En qué puedo ayudarte?
+				</div>
+			</div>
+		
+			<div class="chat-input">
+				<input type="text" id="userInput" placeholder="Escribe aquí...">
+				<button onclick="sendMessage()">Enviar</button>
+			</div>
+		</div>		
+	
+		<!-- JAVASCRIPT VA AQUÍ -->
+		<script>
+			function sendMessage() {
+				const input = document.getElementById("userInput");
+				const chatBody = document.getElementById("chatBody");
+				const message = input.value.toLowerCase();
+		
+				if (message === "") return;
+		
+				chatBody.innerHTML += `<div class="user-message">${input.value}</div>`;
+				input.value = "";
+		
+				let response = "¡Hola! :D, soy tu asistente virtual y vengo a ayudarte con información sobre el café ☕, horarios ⏰, Wi-Fi 📶 o ubicación 📍.";
+		
+				if (message.includes("cafe")) {
+					response = "Ofrecemos espresso, cappuccino, latte y café frío.";
+				} else if (message.includes("horario")) {
+					response = "Abrimos de lunes a jueves de 8:00 AM a 6:00 PM.";
+				} else if (message.includes("wifi")) {
+					response = "Sí ☕📶 contamos con Wi-Fi gratuito para nuestros clientes, para consultar la clave puedes preguntar al personal a cargo.";
+				} else if (message.includes("ubicacion")) {
+					response = "¡Nos ubicamos en Agora Mall, Av. Abraham Lincoln esq. con Av. John F. Kennedy, te esperamos :D!";
+				} else if (message.includes("contacto")) {
+					response = "Puedes llamarnos al 820-916-1791, agregando que, en horarios de lunes a jueves, delivery es de 9:00 AM a 3:40 PM.";
+				} else if (message.includes("gracias")) {
+                    response = "¡Hey!, no hay de que. Aqui estoy para hacer de tu experiencia en Yatai's mas agradable y amena c:"
+				}
+		
+				setTimeout(() => {
+					chatBody.innerHTML += `<div class="bot-message">${response}</div>`;
+					chatBody.scrollTop = chatBody.scrollHeight;
+				}, 500);
+			}
+		
+			// 👇 ESTO VA DEBAJO DE LA FUNCIÓN
+			document.getElementById("userInput").addEventListener("keypress", function(e) {
+				if (e.key === "Enter") {
+					sendMessage();
+				}
+			});
+
+			const carousel = document.querySelector('.carousel-container');
+			const slides = document.querySelectorAll('.carousel-slide img');
+			const prevBtn = document.querySelector('.carousel-btn.prev');
+			const nextBtn = document.querySelector('.carousel-btn.next');
+
+			let currentIndex = 0;
+
+			function updateCarousel() {
+				carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+			}
+
+			prevBtn.addEventListener('click', () => {
+				currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+				updateCarousel();
+			});
+
+			nextBtn.addEventListener('click', () => {
+				currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+				updateCarousel();
+			});
+		</script>		
+	</body>
+</html>
+
